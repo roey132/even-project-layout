@@ -1,0 +1,14 @@
+:root{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+}
+html{
+    height:100%;
+}
+body{
+    height:100%;
+    margin:0;
+}
+.html{
+    height:100vh;
+}

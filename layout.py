@@ -1,34 +1,33 @@
 from dash import Dash, html, dcc, Output, Input
-import dash_html_components as html
 import dash_bootstrap_components as dbc
 import plotly.express as px
 
 
 app = Dash(__name__)
 
-app.layout = html.Div([
-    html.Div(id = 'toolbar', children = [
-        html.Div(id = 'info-flex-bar', children = [
-            html.Button(),
-            html.Button(),
-            html.Button()
+app.layout = html.Div(className = 'html',children = [
+    html.Div(id = 'toolbar', className = 'toolbar', children = [
+        html.Div(id = 'info-flex-bar', className = 'info-flex-bar', children = [
+            html.Button('asd', className = 'page-button'),
+            html.Button('asd', className = 'page-button'),
+            html.Button('asd', className = 'page-button')
         ]),
-        html.Div(id = 'kpi-flex-bar', children = [
-            html.Div(),
-            html.Div(),
-            html.Div(),
-            html.Div(),
-            html.Div(),
-            html.Div(),
-            html.Div(),
-            html.Div()                                    
+        html.Div(id = 'kpi-flex-bar', className = 'kpi-flex-bar', children = [
+            html.Div('asd'),
+            html.Div('asd'),
+            html.Div('asd'),
+            html.Div('asd'),
+            html.Div('asd'),
+            html.Div('asd'),
+            html.Div('asd'),
+            html.Div('asd')                                    
         ])
     ]),
-    html.Div(id = 'body', children = [
-        html.Div(id = 'registered-graph-container'),
-        html.Div(id = 'permits-graph-container'),
-        html.Div(id = 'passages-graph-container'),
-        html.Div(id = 'illegal-stays-graph-container')
+    html.Div(id = 'body', className = 'body', children = [
+        html.Div('asd', id = 'registered-graph-container', className = 'graph-container'),
+        html.Div('asd', id = 'permits-graph-container', className = 'graph-container'),
+        html.Div('asd', id = 'passages-graph-container', className = 'graph-container'),
+        html.Div('asd', id = 'illegal-stays-graph-container', className = 'graph-container')
     ])
 ])
 
