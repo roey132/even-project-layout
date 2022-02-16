@@ -1,0 +1,26 @@
+.kpi-container{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 10rem;
+    background-color: #30BFBF;
+    overflow: hidden;
+}
+.kpi-value-container{
+    display: flex;
+    height:70%;
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.kpi-title-container{
+    display: flex;
+    background-color: #01786F;
+    height:30%;
+    font-size: 1.1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #000000;
+}
