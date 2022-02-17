@@ -1,7 +1,7 @@
 .toolbar{
     display : flex;
     flex-direction: column;
-    height: 20%;
+    height: 25%;
 }
 .page-button{
     width: 50px;
@@ -10,5 +10,11 @@
 .kpi-flex-bar{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    height: 10rem;
+}
+.info-flex-bar{
+    height:3rem;
+    display: flex;
     align-items: center;
 }

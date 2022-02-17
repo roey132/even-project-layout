@@ -13,9 +13,19 @@ app = Dash(__name__)
 app.layout = html.Div(className = 'html',children = [
     html.Div(id = 'toolbar', className = 'toolbar', children = [
         html.Div(id = 'info-flex-bar', className = 'info-flex-bar', children = [
-            html.Button('asd', className = 'page-button'),
-            html.Button('asd', className = 'page-button'),
-            html.Button('asd', className = 'page-button')
+            dbc.RadioItems(
+            id="radios",
+            className="btn-group",
+            inputClassName="btn-check",
+            labelClassName="btn btn-outline-primary",
+            labelCheckedClassName="active",
+            options=[
+                {"label": "סך הכל", "value": 1},
+                {"label": "עזה", "value": 2},
+                {"label": 'איו"ש', "value": 3},
+            ],
+            value=1,
+        )
         ]),
         html.Div(id = 'kpi-flex-bar', className = 'kpi-flex-bar', children = [
             kpi('app-kpi','15','רשומים לאפליקציה'),

@@ -1,0 +1,32 @@
+.btn-group{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    background-color: #30BFBF;
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+.btn:hover{
+    background-color: #289e9e;
+}
+.active{
+    background-color: #01786F;
+    pointer-events: none;
+}
+.form-check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 2px;
+}
+  input {
+    visibility:hidden;
+    width: 0px;
+}
