@@ -3,14 +3,13 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 
 def kpi(kpi_id,value,title):
-    return html.Div(className = 'kpi-container',children = [
+    return html.Div(id=kpi_id+'-container', className = 'kpi-container',children = [
         html.Div(value, id = kpi_id, className = 'kpi-value-container'),
         html.Div(title, className = 'kpi-title-container')
     ])
 
-app = Dash(__name__)
 
-app.layout = html.Div(className = 'html',children = [
+layout = html.Div(className = 'html',children = [
     html.Div(id = 'toolbar', className = 'toolbar', children = [
         html.Div(id = 'info-flex-bar', className = 'info-flex-bar', children = [
             dbc.RadioItems(
@@ -20,11 +19,11 @@ app.layout = html.Div(className = 'html',children = [
             labelClassName="btn btn-outline-primary",
             labelCheckedClassName="active",
             options=[
-                {"label": "סך הכל", "value": 1},
+                {"label": "סך הכל", "value": 3},
                 {"label": "עזה", "value": 2},
-                {"label": 'איו"ש', "value": 3},
+                {"label": 'איו"ש', "value": 1},
             ],
-            value=1,
+            value=3,
         )
         ]),
         html.Div(id = 'kpi-flex-bar', className = 'kpi-flex-bar', children = [
@@ -39,12 +38,17 @@ app.layout = html.Div(className = 'html',children = [
         ])
     ]),
     html.Div(id = 'body', className = 'body', children = [
-        html.Div('asd', id = 'registered-graph-container', className = 'graph-container'),
-        html.Div('asd', id = 'permits-graph-container', className = 'graph-container'),
-        html.Div('asd', id = 'passages-graph-container', className = 'graph-container'),
-        html.Div('asd', id = 'illegal-stays-graph-container', className = 'graph-container')
+        html.Div(id = 'registered-graph-container', className = 'graph-container', children = [
+            dcc.Graph(id='registered-graph', className='graph')
+        ]),
+        html.Div(id = 'permits-graph-container', className = 'graph-container', children = [
+            dcc.Graph(id='permits-graph', className='graph')
+        ]),
+        html.Div(id = 'passages-graph-container', className = 'graph-container', children = [
+            dcc.Graph(id='passages-graph', className='graph')
+        ]),
+        html.Div(id = 'illegal-stays-graph-container', className = 'graph-container', children = [
+            dcc.Graph(id='illegal-stays-graph', className='graph')
+        ])
     ])
 ])
-
-if __name__ == '__main__':
-    app.run_server(debug=True)

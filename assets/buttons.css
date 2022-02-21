@@ -3,7 +3,7 @@
     align-items: center;
 }
 .btn{
-    background-color: #30BFBF;
+    background-color: var(--main-color);
     width: 5rem;
     height: 2rem;
     display: flex;
@@ -15,8 +15,11 @@
     background-color: #289e9e;
 }
 .active{
-    background-color: #01786F;
+    background-color: var(--secondary-color);
     pointer-events: none;
+    -moz-box-shadow:    inset 0 0 5px #000000;
+    -webkit-box-shadow: inset 0 0 5px #000000;
+    box-shadow:         inset 0 0 5px #000000;
 }
 .form-check{
     display: flex;
